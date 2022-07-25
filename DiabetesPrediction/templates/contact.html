@@ -1,0 +1,370 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        .hbody{
+        background-image:url("{%static 'DiabetesPrediction\images\a1.jpg'%}");
+        height: 200px;
+        }
+
+.header {
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+.header a {
+  font-family: 'Livvic',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  margin: -65px 0px 0px 50px;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+  margin-top: -60px;
+}
+p{
+padding-bottom: 1em;
+font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+line-height: 1.9em;
+font-size: 20px;
+}
+.rtext {
+text-align: left;
+    width: 80%;
+    max-width: 1080px;
+    margin: auto;
+    position: relative;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+	padding-left: 60px;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+    margin-left: 32px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* for contact form */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 50px;
+  height: 350px; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 50px 125px 50px 50px;
+  height: 350px; /* Should be removed. Only for demonstration */
+}
+.row{
+width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+    </style>
+</head>
+<body>
+<div class="hbody">
+<div class="header">
+  <div class="plogo">
+    <img src="{%static 'DiabetesPrediction\images\plogo.png'%}" width="60px" height="60px"></div>
+  <a href="#default" class="logo"> PREDICTOR </a>
+  <div class="header-right">
+    <a  href="/">Homepage</a>
+    <a href="research/">Research</a>
+      <a href="predict/">Diabetes Predictor</a>
+    <a href="blog/">Blog</a>
+      <a href="contact/">Contact</a>
+  </div>
+</div>
+
+<!--img src="{%static 'DiabetesPrediction\images\logoo.png'%}", width = "100", height="100"-->
+</div>
+
+<div align="center">
+         <h1 style="color:#000">
+       Contact
+    </h1>
+    <div class="rtext ">
+     <p>
+         Sampsa Hautaniemi is in charge of scientific coordination of the project.
+         You can contact him in questions related to project conduct, data, interviews or collaboration.</p>
+
+     <p>
+         The project manager, Ann-Christin Ostwaldt, handles the administrative operations related to the
+         project coordination and reporting. </p>
+
+    <p>You can also reach the project administration from decider@helsinki.fi
+     </p>
+     </div>
+
+    <div class="row">
+  <div class="column1" style="background-color: rgba(207,231,218,0.5);">
+    <img src="{%static 'DiabetesPrediction\images\logoo.png'%}">
+  </div>
+  <div class="column2" style="background-color: rgba(207,231,218,0.5);">
+    <h2 style="text-align: left;">Diana</h2>
+    <h3 style="text-align: left;">Software Engineer</h3>
+      <p style="padding-bottom: 2px; line-height: 6px; text-align: left;">diana@predictor.com</p>
+      <p style="padding-bottom: 2px; line-height: 6px; text-align: left;">+358 50 336 4765</p>
+  </div>
+</div>
+
+</div>
+
+   <footer class="footer-distributed">
+
+			<div class="footer-left">
+				<h3>©PREDICTOR<span>PROJECT</span></h3>
+
+				<p class="footer-company-name">© 2022 Machine Learning Solutions Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>Follow us on:</span></p>
+				</div>
+					<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 22-27782183</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@eduonix.com">support@eduonix.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					The right choice for your health care needs.</p>
+			</div>
+		</footer>
+</body>
+</html>
