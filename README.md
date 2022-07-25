@@ -44,7 +44,7 @@
                 •	Instagram
                 •	Spotify
                 •	Dropbox, etc.
-          Basics Setting
+ #### Basics Setting
 	•	First of all, create a new project in pycharm, and run command (Django-admin startproject DiabetesPrediction). You can see some default files and folder, like manage.py, etc.
 	•	The next step is to start our server, for that we have to type command in terminal ()
 	•	In order to run whole project and run server type following commands (1. Python manage.py runserver)
@@ -54,3 +54,36 @@
 	•	Now you can change the title to Home and in body you can write welcome to the home page. 
 	•	The next step is to link this home.html in the urls.
 	•	Open urls.py
+	•	There is already one url mentioned which is for admin page
+	•	Create views.py file under the DiabetesPrediction/DiabetesPrediction dir.
+	•	Now import views in url by writing from . import views (. Specify current dir)
+	•	We have to mention another url, so for that write path(“”,  views.home)
+	•	Now open views.py
+	•	Create function name home(request): and in this home function return the name of html page home.html which is home. render(request, 'home.html')	
+	•	For that import from django.shortcuts import render
+	•	Open settings.py 
+	•	Go to the TEMPLATES, ‘DIR’ : [os.path.join(BASE_DIR, ‘templates’)]
+	•	Now if you refresh the webpage you can see welcome to home page!
+	•	Accessing Admin panel and setting user name and password
+	•	Run the following commands in terminal
+	•	Python manage.py makemigrations
+	•	Python manage.py migrate
+	•	Python manage.py createsuperuser
+	•	(username: diana, Password: diana)
+	•	Now further I edit the home.html page.
+	•	I am going to begin by adding a background image in home page. For that I have to create a folder named as static under the main dir.
+	•	Inside static dir create another dir named as DiabetesPrediction.
+	•	Inside this DiabetesPrediction dir create another dir named as images.
+	•	Inside the images dir put image that you want to set as home page background image.
+	•	Next, open settings.py
+	•	Drag to the bottom and add few lines of code
+	•	STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'))
+	•	STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
+	•	Now edit home.html page to add background image and button for the next page.
+	•	Create another html page named as predict under the templates dir, change the title and add some text.
+	•	Open urls.py
+	•	Create another path for prediction page
+	•	Open views.py and create function for predict
+	•	Now design predict.html page
+
+	
