@@ -15,3 +15,12 @@
           BMI, insulin level, age, and so on.
           •	I am going to apply 6 to 8 ML model to check accuracy in results and then select the
           best model in this aspect.
+ 
+ ### Following ML models are going to be implemented:
+                
+          •	Linear Regression
+          •	Logistic Regression
+          •	SVM (Support Vector Machine) Algo
+          •	Decision Tree Algo
+          •	Random Forest Algo
+          •	Naïve Bayes Algo
